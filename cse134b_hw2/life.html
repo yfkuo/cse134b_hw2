@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Answer to Extra CRedit 3: -->
+        <meta name="keywords" content="Fiona, travel, food, hobbies, HTML">
+        <title>Life</title>
+        <style>
+        .nav-box,
+        .blog-box {
+        border-style: solid;
+        border-color: gray;
+        border-width: 1px;
+        }
+
+        canvas {
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        }
+
+        travel-tip {
+            display: block;
+            border-left: 4px solid gray;
+            padding: 0.5em;
+            background-color: #f9f9f9;
+        }
+                </style>
+    </head>
+  <body>
+    <header>
+        <h1>LIFE <small>(includes unfit/experiment tags to my profolio)</small></h1>
+    </header>
+
+    <nav>
+        <a href="projects.html"><div class="nav-box">PROJECTS</div></a>
+        <a href="resume.html"><div class="nav-box">Resume</div></a>
+        <a href="../index.html"><div class="nav-box">HOME</div></a>
+    </nav>
+
+    <main>
+        <article class="blog-box">
+            <h2>Travel</h2>
+            <picture>
+                <source srcset="travel.webp" type="image/webp">
+                <img src="travel.jpg" alt="Travel photo" width="300">
+            </picture>
+            <p>I visited Japn in 2024 and it was <i>incredible</i>!</p>
+            <blockquote cite="https://example.com/barcelona">
+                "The city was alive with art, music, food, and architure."
+            </blockquote>
+            <details>
+                <summary>See travel tips</summary>
+                <ol>
+                    <li>Always carry cash.</li>
+                    <li>Use <kbd>cmd + shift + 4</kbd> for screenshots on Mac.</li>
+                </ol>
+            </details>
+            <hr>
+            <aside>
+                <p>Side note: Use metro over taxis!</p>
+            </aside>
+        </article>
+
+        <article class="blog-box">
+            <h2>Food</h2>
+            <video width="320" controls>
+                <source src="food.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>I cooked <code>kimchi fried rice</code> from scratch.</p>
+            <pre>
+                Ingredients:
+                - Rice
+                - Kimchi
+                - Egg
+                - Gochujang
+                - Onion, carrot
+            </pre>
+            <p><cite>Eat, Pray, Love</cite> is a good book.</p>
+            <form>
+                <fieldset>
+                    <legend>Rate this dish</legend>
+                    <label for="rating">Stars:</label>
+                    <select id="rating" name="rating">
+                        <optgroup label="Positive">
+                            <option value="5">5</option>
+                            <option value="4">4</option>
+                        </optgroup>
+                        <optgroup label="Neutral">
+                            <option value="3">3</option>
+                        </optgroup>
+                        <optgroup label="Negative">
+                            <option value="2">2</option>
+                            <option value="1">1</option>
+                        </optgroup>
+                    </select>
+                    <br>
+                        <label for="feedback">Your comments:</label>
+                        <textarea id="feedback" name="feedback"></textarea>
+                    <br>
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
+            <progress value="80" max="100">80%</progress>
+            <hr>
+        </article>
+
+        <article class="blog-box">
+            <h2>Hobbies</h2>
+            <p>Using SVG:<svg width="20" height="20"><circle cx="10" cy="10" r="8"/></svg>done!</p>
+
+            <canvas id="myCanvas" width="100" height="100"></canvas>
+            <script>
+                const canvas = document.getElementById("myCanvas");
+                const ctx = canvas.getContext("2d");
+                // ctx.fillStyle = "#FF0000";
+                ctx.fillRect(10, 10, 50, 50);
+            </script>
+
+            <iframe
+                width="300"
+                height="200"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="YouTube video"
+                allowfullscreen
+            ></iframe>
+
+            <dialog open>
+                <p>Experimenting dialog.</p>
+            </dialog>
+
+            <template>
+                <p>This content is inside a template.</p>
+            </template>
+
+            <span><dfn title="Mario Game">MG</dfn></span>
+            <ins>Recently added drawing as a hobby.</ins>
+            <del>Coding every weekend</del>
+            <noscript>Your browser does not support JavaScript!</noscript>
+
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                Not support the audio element.
+            </audio>
+            <hr>
+        </article>
+
+        <article class="blog-box">
+            <h2>More Tags</h2>
+
+            <hgroup>
+                <h3>Exploring HTML Tags</h3>
+                <p>Some lesser-known tags in one place.</p>
+            </hgroup>
+
+            <search>
+                <form>
+                    <label for="searchBox">Search this page:</label>
+                    <input id="searchBox" name="q" type="search" list="tag-options">
+                    <datalist id="tag-options">
+                        <option value="canvas">
+                        <option value="svg">
+                        <option value="iframe">
+                    </datalist>
+                    <input type="submit" value="Go">
+                </form>
+            </search>
+
+            <table>
+                <caption>Tag Reference Table</caption>
+                <colgroup>
+                    <col span="1" style="border-style: solid; border-color: gray; border-width: 1px;">
+                    <col span="1" style="border-style: solid; border-color: gray; border-width: 1px;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Tag</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt;td&gt;</td>
+                        <td>defines a standard data cell in an HTML table</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <h3>Custom Tag 1</h3>
+                <travel-tip>
+                    Bring a coin purse and cash! Many vending machines in Japan take coins or cash only.
+                </travel-tip>
+            <hr>
+            <h3>Custom Tag 2</h3>
+            <hello-world></hello-world>
+            <script>
+                class HelloWorld extends HTMLElement {
+                    connectedCallback() {
+                    console.log("Hello world!");
+                    }
+                }
+                customElements.define("hello-world", HelloWorld);
+            </script>
+            <hr>
+            <h3>Extra Credit</h3>
+                <ol>
+                    <li><b>Einstein's famous formula using MathML:  </b>
+                        <math>
+                            <mi>E</mi>
+                            <mo>=</mo>
+                            <mi>m</mi>
+                            <msup>
+                                <mi>c</mi>
+                                <mn>2</mn>
+                            </msup>
+                        </math>
+                    </li>
+
+                    <li><b>Despite being in the HTML specification for a long time, 
+                        developers could not make use of it until quite recently. 
+                        Explain why that might be the case: </b> 
+                        I think it is because not all browsers support MathML, 
+                        which makes it less convenient for developers to use. 
+                        Ideally, we want our websites to work across all browsers without issues. 
+                        Since MathML is not universally supported, developers often choose other solutions instead.
+                    
+                    </li>
+                    <li><b>Use meta tags to provide additional information to search 
+                        engines or social media websites: </b> the keywords for search engines in on top of this HTML.
+                    </li>
+                </ol>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Fiona Kuo. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
